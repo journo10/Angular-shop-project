@@ -1,0 +1,31 @@
+  
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="text-center">
+            <h1 class="my-3">Kayıt Ol</h1>
+            <h6 class="my-1">Kayıtlı değil misin? Kayıt Ol.</h6>
+          </div>
+          <form [formGroup]="registerForm" (ngSubmit)="registerSubmit()" >
+            <div class="my-3 mx-3">
+              <label for="name" class="form-label">Ad Soyad</label>
+              <input formControlName="name" type="text" class="form-control" id="fullName1" placeholder="Ad Soyad"/>
+            </div>
+            <div class="my-3 mx-3">
+              <label for="email" class="form-label">E-posta</label>
+              <input formControlName="email" type="email" class="form-control" id="email1" placeholder="E-posta" />
+            </div>
+            <div class="my-3 mx-3">
+              <label for="password" class="form-label">Şifre</label>
+              <input formControlName="password" type="password" class="form-control" id="password1" placeholder="Şifre" />
+            </div>
+            <div class="d-grid col-3 mx-auto my-3">
+              <button type="submit" class="btn btn-primary">Kayıt Ol</button>
+            </div>
+          </form>
+          <a routerLink="/login">Giriş için <strong>tıklayınız!</strong></a>
+        </div>
+      </div>
+    </div>
+  </div>

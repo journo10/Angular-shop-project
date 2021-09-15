@@ -1,0 +1,33 @@
+<div class="d-flex text-white bg-danger">
+  <div class="container d-flex">
+    <div class="nav-item">
+      <a class="nav-link text-white">Tüm Ürünler</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link text-white">Elektronik</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link text-white">Giyim-Moda</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link text-white">Takı-Tasarım</a>
+    </div>
+  </div>
+  <input [(ngModel)]="filterText" class="form-control" type="search" placeholder="Ara"aria-label="Ara"/>
+</div>
+
+<div class="container mt-3">
+  <div class="row">
+    <ng-container *ngFor="let product of productsList | productFilter:filterText ">
+      <div class="card col-md-3" style="width: 18rem">
+        <img src="{{product.image}}" class="card-img-top" />
+        <div class="card-body">
+          <h5 style="white-space:nowrap;overflow:hidden;text-overflow: ellipsis;max-width: 100ch;" class="card-text" class="card-title">{{product.title}}</h5>
+          <p style="white-space:nowrap;overflow:hidden;text-overflow: ellipsis;max-width: 100ch;" class="card-text">{{product.description}}</p>
+          <p class="card-text">Fiyat:<strong>{{product.price}}₺</strong></p>
+          <button (click)="addToCard(product)"  class="btn btn-outline-primary">Sepete Ekle</button>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

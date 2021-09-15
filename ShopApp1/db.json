@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "users": [
+    {
+      "name": "a",
+      "email": "a@gmail.com",
+      "password": "a",
+      "id": 1
+    },
+    {
+      "name": "z",
+      "email": "z@gmail.com",
+      "password": "z",
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
